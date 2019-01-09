@@ -86,7 +86,13 @@
                             <outletCollection property="gestureRecognizers" destination="rJM-wc-X01" appends="YES" id="3JV-Wz-CHf"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Tip Calculator" id="9El-ue-41a"/>
+                    <navigationItem key="navigationItem" title="Tip Calculator" id="9El-ue-41a">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="qZs-BO-y1j">
+                            <connections>
+                                <segue destination="WSS-ob-CBw" kind="push" id="ysd-GI-2kw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="billField" destination="del-S0-jRp" id="T57-xj-ZZC"/>
                         <outlet property="tipControl" destination="a68-zO-Ul8" id="GDX-G4-cqh"/>
@@ -102,6 +108,30 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="728.79999999999995" y="145.27736131934034"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="vcA-EH-HeB">
+            <objects>
+                <viewController id="WSS-ob-CBw" customClass="SettingsViewController" customModule="Project1TipCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2k8-pB-Qoz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customize Default Tip %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wi1-y8-fHe">
+                                <rect key="frame" x="82" y="96" width="188" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zId-Mo-IFk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0gb-p2-BI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1432" y="148"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gEH-aj-93Q">
