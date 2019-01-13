@@ -10,6 +10,10 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var tipOne: UITextField!
+    @IBOutlet weak var tipTwo: UITextField!
+    @IBOutlet weak var tipThree: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +21,9 @@ class SettingsViewController: UIViewController {
     }
     
 
+    @IBAction func onTap(_ sender: Any) {
+        view.endEditing(true);
+    }
     /*
     // MARK: - Navigation
 
@@ -26,5 +33,17 @@ class SettingsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func update(_ sender: Any) {
+        
+        let defaults = UserDefaults.standard
+        //defaults.set
+        //defaults.set(, forKey: T##String)
+        defaults.set(tipOne.text, forKey: "Tip1")
+        defaults.set(tipTwo.text, forKey: "Tip2")
+        defaults.set(tipThree.text, forKey: "Tip3")
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
+    
 }
